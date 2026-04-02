@@ -200,8 +200,12 @@ export async function action({ request }) {
 export default CreateOrder;
 
 // newOrder will be created by the server which will give it an id, hence we have newOrder.id
-// <input type="hidden" name="cart" value={JSON.stringify(cart)} /> is a hack to get cart value into the action function after all the <Form/> belongs to redux. There is still a wat to get the data through Redux apart from the hack but this is more cleaner than doing that.
+// <input type="hidden" name="cart" value={JSON.stringify(cart)} /> is a hack to get cart value into the action function after all the <Form/> belongs to redux. There is still a way to get the data through Redux apart from the hack but this is more cleaner than doing that. When we submit cart will show up in our form. Cart is an object and input takes in strings not object so we stringify.
+
+// The cart will be returned back to an Object via destructuring and priority should be a boolean and not "on" as the form returns it when ticked. The priority will be set to true and will return true if ticked and false if not.
 
 // priority: data.priority === 'true', // Probably comparing the data.priority which is a string with a string, if it was written in Boolean it would be false.
 
 // Checkbox return true or false, name of the property jonas gave it is priority
+
+// redirect is a function provided by react router since we cant use navigate as the action function is not inside a component.

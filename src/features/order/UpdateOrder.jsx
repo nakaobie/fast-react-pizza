@@ -23,3 +23,5 @@ export async function action({ request, params }) {
 
 // fetcher.Form will not navigate away but submit the form and revalidate the page.
 // params deals with the url, the orderId is in the url.
+// We dont need request because we read it from createOrder
+// updateOrder is from our apiRestaurant

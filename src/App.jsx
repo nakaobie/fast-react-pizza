@@ -52,6 +52,12 @@ function App() {
 
 export default App;
 
+// useLoaderData is used to load data from that component
+// Action is used to send data
+// useFetcher is used to retrieve data or update data within the component chain
+
+// Actions are used to write or mutate data
+
 // npm i @reduxjs/toolkit react-redux
 
 // npm i react-router-dom@6

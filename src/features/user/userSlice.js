@@ -7,6 +7,7 @@ function getPosition() {
   });
 }
 
+// Thunk
 export const fetchAddress = createAsyncThunk(
   'user/fetchAddress',
   async function () {
@@ -43,6 +44,7 @@ const userSlice = createSlice({
       state.username = action.payload;
     },
   },
+  // Thunk
   extraReducers: (builder) =>
     builder
       .addCase(fetchAddress.pending, (state) => {

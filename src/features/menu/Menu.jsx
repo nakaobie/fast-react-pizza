@@ -20,3 +20,6 @@ export async function loader() {
 }
 
 export default Menu;
+
+// Render as you fetch strategy, no waterfall. Used in this project
+// Fetch as you render creates waterfalls, the render shows before data hence is hidden with a load screen

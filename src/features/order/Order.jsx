@@ -13,11 +13,11 @@ import UpdateOrder from './UpdateOrder';
 
 function Order() {
   const order = useLoaderData();
-
   const fetcher = useFetcher();
 
   useEffect(
     function () {
+      // menu is stored in fetcher
       if (!fetcher.data && fetcher.state === 'idle') fetcher.load('/menu');
     },
     [fetcher],
@@ -108,3 +108,9 @@ export default Order;
 // useParams() is a hook and only works in components. Doesn't work in regular functions
 // space-y-8 - space between the elements in the parent element
 // The useFetcher hook in react-router-dom is used to interact with server data without causing a full navigation. It allows you to load data from a route loader or submit form data to a route action without reloading the page.
+
+// useFetcher is a React Router hook that lets you interact with server actions or loaders without triggering a full page navigation — perfect for dynamic UIs like forms, buttons, or background data syncs.
+// Submit forms without leaving the current page
+// Load data on demand (e.g., search-as-you-type)
+// Trigger side effects (like updating an order or logging out) without navigation
+// Share state across components using a key for global fetcher access
